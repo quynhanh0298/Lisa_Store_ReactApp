@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   font-weight: 500;
   line-height: 21px;
   color: ${(props) => props.textColor};
-  color: ${(props) => props.fontSize};
+  font-size: ${(props) => props.fontSize};
 `;
 export const Button = ({
   width,

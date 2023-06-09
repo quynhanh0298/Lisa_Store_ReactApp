@@ -6,12 +6,17 @@ import FacebookIcon from "asserts/facebook-icon.svg";
 import TwitterIcon from "asserts/twitter-icon.svg";
 import LinkedInkIcon from "asserts/linkedin-icon.svg";
 import InstagramIcon from "asserts/instagram-icon.svg";
+import { Button } from "components/common/Button";
 
 const StyledFooter = styled.div`
   .footer-top {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    padding-top: 250px;
+    padding-bottom: 150px;
+    padding-left: 300px;
+    padding-right: 300px;
   }
   .info-right {
     display: flex;
@@ -27,10 +32,11 @@ const StyledFooter = styled.div`
     flex-direction: row;
     justify-content: space-between;
     background: #1e2832;
-    padding: 15px 0;
+    padding: 15px 300px;
     align-items: center;
   }
   .lisa {
+    margin-bottom: 32px;
     font-family: "AmstelvarAlpha";
     font-style: normal;
     font-weight: 400;
@@ -40,6 +46,7 @@ const StyledFooter = styled.div`
     color: #000000;
   }
   .lorem {
+    margin-bottom: 35px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
@@ -54,6 +61,7 @@ const StyledFooter = styled.div`
     gap: 40px;
   }
   .info-right-title {
+    margin-bottom: 22px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
@@ -68,6 +76,7 @@ const StyledFooter = styled.div`
     color: #000000;
   }
   .info-right-content {
+    margin-bottom: 12px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
@@ -80,6 +89,11 @@ const StyledFooter = styled.div`
     /* Black */
 
     color: #1e2832;
+
+    transition: 0.3s;
+    &:hover {
+      color: #ff6f61;
+    }
   }
   .lisa-inc {
     font-weight: 400;
@@ -108,6 +122,13 @@ const StyledFooter = styled.div`
 
       color: #ffffff;
     }
+  }
+`;
+
+const StyledButton = styled(Button)`
+  transition: 0.3s;
+  &:hover {
+    background: #ff6f61;
   }
 `;
 
@@ -162,10 +183,17 @@ export const Footer = () => {
         <div className="payment-methods">
           <img src={PaymentIcons} />
         </div>
-        <div className="scroll-to-top">
-          <a>Scroll To Top</a>
+        <StyledButton
+          textColor="#FFFFFF"
+          borderRadius={0}
+          bgColor="#1E2832"
+          fontSize="16px"
+          width="150px"
+          height="32px"
+        >
+          <span>Scroll To Top</span>
           <img src={ScrollToTop} />
-        </div>
+        </StyledButton>
       </div>
     </StyledFooter>
   );

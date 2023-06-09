@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
   align-items: center;
   background: #f0f0f0;
   border-bottom: 1px solid #e3e3e3;
-  padding: 30px 0;
+  padding: 30px 300px;
   .account-and-shopping {
     display: flex;
     flex-direction: row;
