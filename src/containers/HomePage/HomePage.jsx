@@ -22,15 +22,10 @@ const StyledHomePage = styled.div`
   }
 `;
 
-const StyledBanner = styled(Banner)`
-  padding-left: 300px;
-  padding-right: 300px;
-`;
-
 const HomePage = () => {
   return (
     <StyledHomePage>
-      <StyledBanner></StyledBanner>
+      <Banner></Banner>
       <Brands></Brands>
       <NewAndPopular></NewAndPopular>
       <ProductsList></ProductsList>
